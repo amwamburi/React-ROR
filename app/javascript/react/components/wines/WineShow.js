@@ -1,6 +1,13 @@
 import React from 'react';
 import LikeTile from './LikeTile';
+import { StyleSheet, css } from 'aphrodite'
 
+
+const styles = StyleSheet.create({
+  wine_picture: {
+
+  }
+})
 
 const WineShow = ({ wine }) => {
 
@@ -21,20 +28,20 @@ const WineShow = ({ wine }) => {
 
   return (
     <>
-    <div className="jumbotron">
-        <h1 className='display-4'>{title}</h1>
-          <h3 className="lead">Varietal: {variety}</h3>
-          <h4 className="lead">{designation}</h4>
-          <h4 className="lead">{country}</h4>
-          <h4 className="lead">{province}</h4>
-          <h4 className="lead">{region}</h4>
-          <hr className="my-4"/>
+      <div className="jumbotron">
+          <h1 className='display-4'>{title}</h1>
+            <h3 className="lead">Varietal: {variety}</h3>
+            <h4 className="lead">{designation}</h4>
+            <h4 className="lead">{country}</h4>
+            <h4 className="lead">{province}</h4>
+            <h4 className="lead">{region}</h4>
+            <hr className="my-4"/>
 
-          <h4 className="list-group-item">Winery: {winery}</h4>
-          <h4 className="list-group-item">Wine Score: {score}</h4>
-          <h4 className="list-group-item">Price: {price}</h4>
-          <h4 className="list-group-item">Tasting Notes: {description}</h4>
-    </div>
+            <h4 className="list-group-item">Winery: {winery}</h4>
+            <h4 className="list-group-item">Wine Score: {score}</h4>
+            <h4 className="list-group-item">Price: {price}</h4>
+            <h4 className="list-group-item">Tasting Notes: {description}</h4>
+      </div>
       <LikeTile wine={wine}/>
     </>
   )
